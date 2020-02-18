@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Basic Tutorials</title>
+</head>
+
+<body>
+	<!-- number validation-->
+	<p>Enter a number between 1 to 99</p>
+	<input id="number"/>
+	<button type="button" onclick="validaeNumber()">Submit</button>
+	<div id="output"></div>
+	
+	<script>
+		function validaeNumber(){
+			var x,output;
+			x = document.getElementById("number").value;
+			//check if x is not a number or less than 1 or greater than 99
+			if( isNaN(x) || x <1 || x>99){
+				output = 'x is not a valid number';
+			}else{
+				output = 'x is a valid number';
+			}
+			//alert(output);
+			document.getElementById("output").innerHTML = output;
+		}
+	
+	</script>
+	<!--/. number validation-->
+</body>
+</html>
