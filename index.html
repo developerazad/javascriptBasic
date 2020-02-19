@@ -8,11 +8,11 @@
 	<!-- number validation-->
 	<p>Enter a number between 1 to 99</p>
 	<input id="number"/>
-	<button type="button" onclick="validaeNumber()">Submit</button>
+	<button type="button" onclick="validateNumber()">Submit</button>
 	<div id="output"></div>
 	
 	<script>
-		function validaeNumber(){
+		function validateNumber(){
 			var x,output;
 			x = document.getElementById("number").value;
 			//check if x is not a number or less than 1 or greater than 99
@@ -27,5 +27,54 @@
 	
 	</script>
 	<!--/. number validation-->
+
+	<!--Display possibility-->
+	<div id="demo">Hello Man..</div>
+	<br>
+	<button type onclick="clickMe()">Click Me</button>
+	<br>
+	<script>
+
+		function clickMe(){
+			x = document.getElementById("demo").innerHTML = "Text Changed";
+			window.alert(x);
+			console.log(x);
+			//document.write(x);
+		}
+
+	</script>
+	<!--Display possibility-->
+	<br>
+	<!-data types--->
+	<script>
+		x = 5+ "5 ";
+		y = 5+ "Five ";
+		z = "5" + "Five ";
+
+		document.write(x);
+		document.write(y);
+		document.write(z);
+
+		a = typeof(x=null); // object
+		b = typeof(undefined); // undefined
+		null == undefined // true
+		null === undefined // false
+		document.write(a);
+		document.write(b);
+
+	</script>
+	<br><br>
+<!-- Fahrenheit to Celsius -->
+	<input type="text" id="temp">
+	<button type="button" onclick="toCelsius()">Convert</button>
+
+	<script>
+		function toCelsius() {
+			var f, c;
+			f = document.getElementById("temp").value;
+			c = (5/9) * (f-32);
+			window.alert(c);
+		}
+	</script>
 </body>
 </html>
