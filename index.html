@@ -63,7 +63,8 @@
 		document.write(b);
 
 	</script>
-	<br><br>
+	<br>
+	<hr>
 <!-- Fahrenheit to Celsius -->
 	<input type="text" id="temp">
 	<button type="button" onclick="toCelsius()">Convert</button>
@@ -75,6 +76,64 @@
 			c = (5/9) * (f-32);
 			window.alert(c);
 		}
+	</script>
+	<hr>
+<!-- JavaScript event--->
+<!--
+onchange(), onclick(), onmouseover(), onmouseout(), onload(), onkeyup(), onkeydown()
+-->
+	<input type="number" id="fahrenheitNumber" value="">
+	<button type="button" onmouseover="ConvertToCelsius()">Convert</button>
+
+	<script>
+		function ConvertToCelsius() {
+			var f, c;
+			f = document.getElementById("fahrenheitNumber").value;
+			c = (5/9) * (f-32);
+			window.alert(c);
+		}
+	</script>
+	<br>
+<!--  string--->
+	<script>
+		var name = 'Md. Azharul Islam';
+		document.write('My name Md. Azharul Islam Length is '+name.length+'<br>');
+		var msg = "We are the so-called \"Vikings\" from the north.";
+		document.write(msg+'<br>');
+		document.write(msg.indexOf('are')+'<br>');
+		document.write(msg.lastIndexOf('are')+'<br>');
+		document.write(msg.search('are')+'<br>');
+		document.write(msg.replace('-', ' ')+'<br>');
+		document.write(msg.toUpperCase()+'<br>');
+		document.write(msg.toLowerCase()+'<br>');
+		document.write(msg.toLocaleLowerCase()+'<br>');
+
+		// Number
+		var text = NaN;
+		document.write(typeof(text)+'<br>');
+		var numToString = 128;
+		document.write(numToString.toString()+'<br>');
+		document.write(numToString.toExponential(5)+'<br>');
+
+		var x = new Date();
+		//document.write(Number(x)+'<br>');
+		//document.write(Math.random()+'<br>');
+		var y = [1,2,5];
+		Math.min(0, 150, 30, 20, -8, -200);
+
+		// array
+		var a = [1,2,88,99,1001,8888];
+		var l = a.length;
+		for (var i=0;i<9999;i++){
+			if(i==99){
+				document.write(i+'<br>');
+				break;
+			}
+		}
+		document.write(a.pop()+'<br>');
+		document.write(a.push()+'<br>');
+		document.write(a.shift()+'<br>');
+
 	</script>
 </body>
 </html>
